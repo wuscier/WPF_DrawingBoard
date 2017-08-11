@@ -10,18 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPF_DrawingBoard
 {
     /// <summary>
-    /// Test.xaml 的交互逻辑
+    /// DrawingBoard.xaml 的交互逻辑
     /// </summary>
-    public partial class Test : Window
+    public partial class DrawingBoardView : UserControl
     {
-        public Test()
+        public DrawingBoardView()
         {
             InitializeComponent();
+            DataContext = new DrawingBoardViewModel();
         }
     }
 }
