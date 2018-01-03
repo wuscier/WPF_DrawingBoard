@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_DrawingBoard"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
-        <local:DrawingBoardView></local:DrawingBoardView>
+        <local:DrawingBoardContentView></local:DrawingBoardContentView>
     </Grid>
 </Window>

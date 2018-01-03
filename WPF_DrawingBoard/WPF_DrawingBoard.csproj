@@ -58,10 +58,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DrawingBoardViewModel.cs" />
+    <Compile Include="Converters\ColorToBrushConverter.cs" />
+    <Compile Include="DrawingBoard\DrawingBoardContentViewModel.cs" />
+    <Compile Include="RedoUndo\CommandItem.cs" />
+    <Compile Include="RedoUndo\RedoUndo.cs" />
+    <Compile Include="RedoUndo\SelectionMovedOrResizedCommandItem.cs" />
+    <Compile Include="RedoUndo\StrokesChangedCommandItem.cs" />
     <Compile Include="Thumbs\MoveThumb.cs" />
     <Compile Include="Thumbs\ResizeThumb.cs" />
-    <Page Include="DrawingBoardView.xaml">
+    <Page Include="DrawingBoard\DrawingBoardContentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -73,8 +78,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DrawingBoardView.xaml.cs">
-      <DependentUpon>DrawingBoardView.xaml</DependentUpon>
+    <Compile Include="DrawingBoard\DrawingBoardContentView.xaml.cs">
+      <DependentUpon>DrawingBoardContentView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -112,10 +117,23 @@
     <Resource Include="Images\pen.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\erase.png" />
+    <Resource Include="Images\strokeEraser.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\gotosmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\selection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\open.png" />
+    <Resource Include="Images\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
